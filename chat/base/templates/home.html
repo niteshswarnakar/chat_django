@@ -1,7 +1,7 @@
 {% extends 'main.html' %} {% block content %}
 <h1>Home</h1>
 <hr />
-
+<a href="{% url 'create-room' %}">Create-Room</a>
 <div>
   {% for room in rooms %}
   <h3>{{room.id}} - {{room.name}}</h3>
