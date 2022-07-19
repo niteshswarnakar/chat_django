@@ -8,5 +8,6 @@ urlpatterns = [
         path('rooms/',views.getrooms, name = "rooms"),
         path('rooms/<str:pk>/',views.getroom, name = "room"),
         path("create-room/",views.createRoom, name = "create-room"),
-        path("udpate-room/<str:pk>/",views.udpateRoom, name = "udpate-room")
+        path("udpate-room/<str:pk>/",views.udpateRoom, name = "udpate-room"),
+        path("greet/",views.greet, name = "greet")
 ]

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse 
 from .models import Room 
 from .forms import RoomForm
-
+import datetime
 # rooms = [
 #         {'id':'1','name':'Lets learn graphic design'},
 #         {'id':'2','name':'Beginner for backend development'},
@@ -50,6 +50,11 @@ def udpateRoom(request,pk):
         return render(request,"forms.html",context)
 
 
+def greet(request):
+        now = datetime.datetime.now()
+        return render(request, 'demo.html',{
+                'flag': now.month == 1 and now.day == 1
+        } )
 
 
 
