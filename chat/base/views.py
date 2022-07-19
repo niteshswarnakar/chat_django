@@ -49,6 +49,10 @@ def udpateRoom(request,pk):
         context = {'form':form}
         return render(request,"forms.html",context)
 
+def deleteRoom(request,pk):
+        room = Room.objects.get(id = pk)
+        room.delete()
+        return redirect('home')
 
 def greet(request):
         now = datetime.datetime.now()

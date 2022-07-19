@@ -9,5 +9,6 @@ urlpatterns = [
         path('rooms/<str:pk>/',views.getroom, name = "room"),
         path("create-room/",views.createRoom, name = "create-room"),
         path("udpate-room/<str:pk>/",views.udpateRoom, name = "udpate-room"),
+        path("delete-room/<str:pk>/",views.deleteRoom, name = "delete-room"),
         path("greet/",views.greet, name = "greet")
 ]
