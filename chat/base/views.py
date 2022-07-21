@@ -27,6 +27,8 @@ def getroom(request,pk):
 def createRoom(request):
         form = RoomForm()
         if request.method == 'POST':
+                print("create route reached")
+                print(request.POST)
                 # print(request.body.get('description'))
                 form = RoomForm(request.POST)
                 if form.is_valid():
